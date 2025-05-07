@@ -51,18 +51,18 @@ export default function Counter() {
             </div>
             <div className={style.counterWrapper} ref={ref}>
                 <div className={style.counterDiv}>
-                    <img src='/images/mountain.svg'/>
+                    <img src='/images/mountain.svg' alt='planine'/>
                     <p className={style.counterP}>+{counterMountain}</p>
                     <p className={style.counterText}>Planina</p>
 
                 </div>
                 <div className={style.counterDiv}>
-                    <img src='/images/island.svg' />
+                    <img src='/images/island.svg' alt='otoci' />
                     <p className={style.counterP}>+{counterIsland}</p>
                     <p className={style.counterText}>Otoka</p>
                 </div>
                 <div className={style.counterDiv}>
-                    <img src='/images/national_park.svg' />
+                    <img src='/images/national_park.svg' alt='nacionalni_parkovi'/>
                     <p className={style.counterP}>{counterParks}</p>
                     <p className={style.counterText}>Nacionalnih parkova</p>
                 </div>
