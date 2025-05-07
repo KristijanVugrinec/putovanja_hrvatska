@@ -1,15 +1,14 @@
 "use client"
 import style from './header.module.css'
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { FaAngleDown } from "react-icons/fa6";
 
 
 export default function Header() {
 
     const [isOpen,setIsOpen] = useState(false)
     const [isOpenCountry,setIsOpenCountry] = useState(false)
-
-
 
     return (
         <header className={style.header}>
@@ -24,7 +23,7 @@ export default function Header() {
                     Početna
                 </Link>
                 <div className={style.listButton}>
-                  <button onClick={() => setIsOpen(!isOpen)}>Gradovi</button>
+                  <button onClick={() => setIsOpen(!isOpen)}>Gradovi { isOpen ? null : <FaAngleDown /> }</button>
                   {isOpen && (
                     <ul className={`${style.list} ${isOpen ? style.open : ''}`}>
                         <li><Link href="/dubrovnik">Dubrovnik</Link></li>
@@ -50,9 +49,11 @@ export default function Header() {
                 </Link>
             </nav>
             <div className={style.language}>
-                <button onClick={() => setIsOpenCountry(!isOpenCountry)}><img className={style.languageSVG} src='/images/cro-flag.svg' alt='CRO-flag'/>CRO</button>
+                <button onClick={() => setIsOpenCountry(!isOpenCountry)}><img className={style.languageSVG} src='/images/cro-flag.svg' alt='CRO-flag'/>hr {isOpenCountry ? null : <FaAngleDown/> }</button>
                 {isOpenCountry && (
-                    <button><img src='/images/eng-flag.svg' alt='ENG-flag' className={style.languageSVG}/>ENG</button>
+                    <div className={style.dropdown}>
+                        <button><img src='/images/eng-flag.svg' alt='ENG-flag' className={style.languageSVG}/>en</button>
+                    </div>
                 )}
             </div>
             </div>
