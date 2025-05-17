@@ -1,0 +1,63 @@
+.main {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mainWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    overflow: hidden;
+    border-top: 2px solid #e7e5e55b;
+}
+
+.mainWrapper h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color:#0000004f ;
+}
+
+.mainWrapper p {
+    color: black;
+    font-weight: 800;
+}
+
+.festivalWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonsForHandling {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: rgba(31, 30, 30, 0.301);
+}
+
+.buttonsForHandling:hover {
+    background-color: rgba(99, 98, 98, 0.473);
+}

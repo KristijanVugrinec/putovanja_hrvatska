@@ -1,0 +1,36 @@
+.main {
+    margin: auto;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+}
+
+.mainTitle {
+    text-align: center;
+   font-family:  var(--font-geist-mono);
+}
+
+.mainTitle h2 {
+    font-size: 2rem;
+    color: black;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 500px;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.countWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
